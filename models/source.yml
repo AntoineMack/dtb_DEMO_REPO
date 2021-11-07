@@ -33,6 +33,10 @@ sources:
                 - unique
                 - not_null
             - name: CUSTOMER
+              test:
+                - relationships:
+                    to: source('subscription','account')
+                    field: ID
             - name: EFFECTIVE_ON
             - name: BOOKED_ON
             - name: _LOADED_AT
@@ -47,7 +51,15 @@ sources:
                 - unique
                 - not_null
             - name: ORDER_ID
+              test:
+                - relationships:
+                    to: source('subscription','order')
+                    field: ID
             - name: PRODUCT_ID
+              test:
+                - relationships:
+                    to: source('subsription','product')
+                    field: ID
             - name: QUANTITY_CHANGE
             - name: DELETED_AT
             - name: _LOADED_AT
