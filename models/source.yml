@@ -14,6 +14,9 @@ sources:
         identifier: ACCOUNT
         columns:
             - name: ID
+              tests:
+                - unique
+                - not_null
             - name: NAME
             - name: STATE
             - name: CITY
@@ -26,6 +29,9 @@ sources:
             identifier: true
         columns:
             - name: ID
+              tests:
+                - unique
+                - not_null
             - name: CUSTOMER
             - name: EFFECTIVE_ON
             - name: BOOKED_ON
@@ -37,6 +43,9 @@ sources:
         identifier: ORDER_PRODUCT
         columns:
             - name: ID
+              tests:
+                - unique
+                - not_null
             - name: ORDER_ID
             - name: PRODUCT_ID
             - name: QUANTITY_CHANGE
@@ -48,6 +57,9 @@ sources:
         identifier: PRODUCT
         columns:
             - name: ID
+              tests:
+                - unique
+                - not_null
             - name: NAME
             - name: UNIT
             - name: UNIT_RATE
