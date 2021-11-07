@@ -33,7 +33,7 @@ sources:
                 - unique
                 - not_null
             - name: CUSTOMER
-              test:
+              tests:
                 - relationships:
                     to: source('subscription','account')
                     field: ID
@@ -51,12 +51,12 @@ sources:
                 - unique
                 - not_null
             - name: ORDER_ID
-              test:
+              tests:
                 - relationships:
                     to: source('subscription','order')
                     field: ID
             - name: PRODUCT_ID
-              test:
+              tests:
                 - relationships:
                     to: source('subsription','product')
                     field: ID
